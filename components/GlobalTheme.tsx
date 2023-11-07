@@ -12,7 +12,7 @@ export default  globalTheme = createTheme ({
       main: '#102542',
     },
     background: {
-      default: 'rgba(0, 16, 122, 1)',
+      default: 'rgba(108, 169, 216, 1)',
     },
     text: {
       primary: 'rgba(0,0,0,0.79)',
