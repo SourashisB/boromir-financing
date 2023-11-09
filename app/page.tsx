@@ -2,14 +2,13 @@
 
 import React from "react";
 import Header from "@/components/Header";
-import CustomDrawer from "@/components/Drawer";
+import Footer from "@/components/Footer";
 
-
-const labeltext = "Hi What's up"
 export default function Home() {
   return (
     <div>
       <Header/>
+      <Footer/>
     </div>
   )
 }

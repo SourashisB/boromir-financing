@@ -10,11 +10,9 @@ import CreditCardIcon from '@mui/icons-material/CreditCard';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import RequestQuoteIcon from '@mui/icons-material/RequestQuote';
 import ContactSupportIcon from '@mui/icons-material/ContactSupport';
-import Button from '@mui/material/Button';
-import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import { CustomButton } from './Button';
-
-
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import Drawer from '@mui/material/Drawer';
 
 export default function CustomDrawer() {
     const [state, setState] = React.useState(false)
@@ -24,6 +22,7 @@ export default function CustomDrawer() {
     }
 
     const handleCloseDrawer = () => {
+
         setState(false)
     }
 
@@ -59,13 +58,14 @@ export default function CustomDrawer() {
                 </ListItem>
             </List>
             <Divider />
-            <List sx={{ justifyContent: "flex-end" }}>
+            <List >
                 <ListItem key={"AI"} disablePadding>
                     <ListItemButton>
                         <ListItemIcon>
                             <ContactSupportIcon />
+                            <ListItemText primary={"Contact AI Support"} />
                         </ListItemIcon>
-                        <ListItemText primary={"Contact AI Support"} />
+
                     </ListItemButton>
                 </ListItem>
             </List>
@@ -74,11 +74,20 @@ export default function CustomDrawer() {
 
     return (
         <React.Fragment>
-            <Button onClick={handleOpenDrawer}>Hello</Button>
-            <SwipeableDrawer open={state} onClose={handleCloseDrawer} onOpen={handleOpenDrawer}>
+            <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                sx={{ mr: 2 }}
+                onClick={handleOpenDrawer}>
+                <MenuIcon />
+            </IconButton>
+            <Drawer open={state} onClose={handleCloseDrawer} onClick={handleCloseDrawer}>
                 {list()}
-            </SwipeableDrawer>
+            </Drawer>
         </React.Fragment>
 
     )
 }
+
