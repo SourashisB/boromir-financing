@@ -29,7 +29,7 @@ export default function Header() {
 
     return (
         <React.Fragment>
-            <AppBar position="fixed">
+            <AppBar position="static">
                 <Toolbar>
                     <React.Fragment>
                         <CustomDrawer />
