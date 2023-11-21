@@ -30,15 +30,15 @@ const  Footer: React.FC = () => {
                     my: 1,
                     px: '2rem'
                 }}>
-                    <IconButton size='large'>
+                    <IconButton  className={styles.growButton} size='large' disableFocusRipple disableRipple>
                         <InstagramIcon />
                     </IconButton>
-                    <IconButton target='_blank' href='https://www.linkedin.com/in/sourashis-bhowmik-31366b156/' size='large'>
+                    <IconButton className={styles.growButton} target='_blank' href='https://www.linkedin.com/in/sourashis-bhowmik-31366b156/' size='large' disableFocusRipple disableRipple>
                         <LinkedInIcon />
                     </IconButton>
                 </Box>
             </Box>
-            <Box sx={{ px: '.6rem', my: 0, justifyContent: 'center', flexGrow: 1 }}>
+            <Box sx={{ my: 0, py: 0, justifyContent: 'flex-end', flexGrow: 1 }}>
                 <Link target="_blank" rel="noopener noreferer"
                     underline="hover"
                     color={'rgba(108, 169, 216, 1)'} href="https://github.com/SourashisB">More from this creator
