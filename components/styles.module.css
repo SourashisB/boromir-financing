@@ -1,0 +1,9 @@
+.footer {
+    background-color: #faf3ddff;
+    padding: 10px;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}

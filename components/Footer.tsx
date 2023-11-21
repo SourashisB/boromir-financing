@@ -5,20 +5,19 @@ import baseLogo from '@/public/logo.jpg'
 import { IconButton } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import React from 'react';
+import styles from '@/components/styles.module.css'
 
-export default function Footer() {
+
+
+const  Footer: React.FC = () => {
+
     return (
-        <Paper sx={{
-            marginTop: 'calc(10% + 60px)',
-            position: 'absolute',
-            bottom: 0,
-            width: '100%'
-        }}>
+        <footer className={styles.footer}>
             <Box sx={{
                 flexGrow: 1,
                 justifyContent: "flex",
                 display: "flex",
-                my: 1,
                 p: '1'
             }}>
                 <Image src={baseLogo} alt='Boromir Financing Logo'
@@ -45,6 +44,8 @@ export default function Footer() {
                     color={'rgba(108, 169, 216, 1)'} href="https://github.com/SourashisB">More from this creator
                 </Link>
             </Box>
-        </Paper>
+        </footer>
     )
 }
+
+export default Footer;

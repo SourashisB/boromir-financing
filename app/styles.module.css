@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+  }
+  
+.box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+.link {
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+.text {
+    font-weight: bold;
+    color: #2E1F27;
+  }

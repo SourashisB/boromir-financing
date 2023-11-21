@@ -1,42 +1,81 @@
 "use client"
 
-import React from "react";
+import React, { useEffect, useState } from "react"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Box, Container, Button, Typography } from "@mui/material";
-import insPhoto from '../public/insurance-photo-1.jpg';
+import { Grid, Container, Typography, Box, Paper } from "@mui/material";
 import { Card, CardActionArea, CardMedia, CardContent } from "@mui/material";
 import Image from "next/image";
+import Carousel from 'react-material-ui-carousel';
+import photo1 from '@/public/insurance-photo-1.jpg';
+import photo2 from '@/public/insurance-photo-2.jpg';
+import photo3 from '@/public/insurance-photo-3.jpg';
+import styles from './styles.module.css'
 
+interface CardProps {
+  typeText: string,
+  photograph: any
+
+}
 
 export default function Home() {
 
-  const media = {
-    width: "100px",
-    height: "100px",
 
+  const EachCard: React.FC<CardProps> = ({ typeText, photograph }) => {
+    return (
+      <Container sx={{ maxWidth: 400, direction: 'column', }}>
+        <Card sx={{ maxWidth: 380, }}>
+          <CardActionArea>
+            <CardMedia sx={{ maxWidth: 500 }}>
+              <Image src={photograph} alt="insurance photo" width='380' height='230' />
+            </CardMedia>
+            <CardContent>
+              <Typography justifyContent='center' gutterBottom fontSize='12'>
+                {typeText}
+              </Typography>
+              <Typography justifyContent='center' fontWeight='bold' fontSize='14' overflow='hidden' gutterBottom>Find out more </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      </Container>
+    )
   }
+
+  const duplicateCards = [<EachCard typeText="Explore a wide variety of insurance products for sale" photograph="photo1" />,
+  ]
+
   return (
-    <React.Fragment>
+    <>
       <Header />
-      <Container maxWidth="lg" sx={{ py: 0.5, my: 0.5 }}>
-        <Box sx={{ mx: 0.5, fontWeight: 'bold', display: 'flex', justifyContent: 'center' }}>
-          <Card sx={{ maxWidth: 345 }}>
-            <CardActionArea>
-              <CardMedia>
-                <Image src={insPhoto} alt="insurance photo" width='380' height='230' />
-              </CardMedia>
-              <CardContent>
-                <Typography justifyContent='center' fontWeight='bold' fontSize='14' overflow='hidden' gutterBottom>Find out more </Typography>
-                <Typography justifyContent='center' gutterBottom fontSize='12'>
-                  Explore a wide variety of insurance products tailored specifically to you and your family
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+      <br />
+      <Container sx={{ mx: 'sm' }}>
+        <Box sx={{ maxWidth: 480 }} flexGrow={1} >
+          <Carousel className="my-component" navButtonsAlwaysVisible={false} animation="slide" stopAutoPlayOnHover={true} indicatorContainerProps={{ style: { margin: "20px" } }} >
+            <Container >
+              <EachCard typeText="Explore a wide variety of insurance products that suit your needs" photograph={photo1} />
+            </Container>
+            <Container>
+              <EachCard typeText="See how you can keep your family safe from life's events" photograph={photo2} />
+            </Container>
+            <Container  >
+              <EachCard typeText="Keep yourself protected when vacationing abroad" photograph={photo3} />
+            </Container>
+          </Carousel>
         </Box>
       </Container>
-      <Footer />
-    </React.Fragment >
+      <br />
+      <div className={styles.container}>
+        <div className={styles.box}>
+          <p>Hi</p>          
+        </div>
+        <div className={styles.box}>
+          <p>Hello</p>      
+        </div>
+        <div className={styles.box}>
+          <p>Yo</p>
+        </div>
+      </div>
+      <br/>
+    </ >
   )
 }
