@@ -21,7 +21,7 @@ const CarouselCards: React.FC<CarouselCardsProps> = ({ items }) => {
             items.map((item, index) => (
                 
                 <div key={index}>
-                <Card sx={{ width: 350, height: 280,}}>
+                <Card sx={{ width: 400, height: 280,}}>
                   <CardMedia
                     component="img"
                     height="160"

@@ -10,41 +10,43 @@ import styles from '@/components/styles.module.css'
 
 
 
-const  Footer: React.FC = () => {
+const Footer: React.FC = () => {
 
     return (
-        <footer className={styles.footer}>
-            <Box sx={{
-                flexGrow: 1,
-                justifyContent: "flex",
-                display: "flex",
-                p: '1'
-            }}>
-                <Image src={baseLogo} alt='Boromir Financing Logo'
-                    width={163}
-                    height={79.448} />
+        <div style={{position: 'relative', minHeight: '100vh'}}>
+            <footer className={styles.footer}>
                 <Box sx={{
                     flexGrow: 1,
-                    justifyContent: "flex-end",
+                    justifyContent: "flex",
                     display: "flex",
-                    my: 1,
-                    px: '2rem'
+                    p: '1'
                 }}>
-                    <IconButton  className={styles.growButton} size='large' disableFocusRipple disableRipple>
-                        <InstagramIcon />
-                    </IconButton>
-                    <IconButton className={styles.growButton} target='_blank' href='https://www.linkedin.com/in/sourashis-bhowmik-31366b156/' size='large' disableFocusRipple disableRipple>
-                        <LinkedInIcon />
-                    </IconButton>
+                    <Image src={baseLogo} alt='Boromir Financing Logo'
+                        width={163 * 0.95}
+                        height={79.448 * 0.95} />
+                    <Box sx={{
+                        flexGrow: 1,
+                        justifyContent: "flex-end",
+                        display: "flex",
+                        my: 1,
+                        px: '2rem'
+                    }}>
+                        <IconButton className={styles.growButton} size='large' disableFocusRipple disableRipple>
+                            <InstagramIcon />
+                        </IconButton>
+                        <IconButton className={styles.growButton} target='_blank' href='https://www.linkedin.com/in/sourashis-bhowmik-31366b156/' size='large' disableFocusRipple disableRipple>
+                            <LinkedInIcon />
+                        </IconButton>
+                    </Box>
                 </Box>
-            </Box>
-            <Box sx={{ my: 0, py: 0, justifyContent: 'flex-end', flexGrow: 1 }}>
-                <Link target="_blank" rel="noopener noreferer"
-                    underline="hover"
-                    color={'rgba(108, 169, 216, 1)'} href="https://github.com/SourashisB">More from this creator
-                </Link>
-            </Box>
-        </footer>
+                <Box sx={{ my: 0, py: 0, justifyContent: 'flex-end', flexGrow: 1 }}>
+                    <Link target="_blank" rel="noopener noreferer"
+                        underline="hover"
+                        color={'rgba(108, 169, 216, 1)'} href="https://github.com/SourashisB">More from this creator
+                    </Link>
+                </Box>
+            </footer>
+        </div>
     )
 }
 

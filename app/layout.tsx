@@ -8,8 +8,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <body>
         <Suspense>
-          <div className="w-full">
-            <div className="mx-8 max-w-2xl py-20 sm:mx-auto">
+          <div className="w-full" style={{minHeight: 'auto'}}>
+            <div style={{minHeight: 'auto'}}>
               <ThemeRegistry options={{ key: 'mui' }}>{children}</ThemeRegistry>
               <Footer />
             </div>
