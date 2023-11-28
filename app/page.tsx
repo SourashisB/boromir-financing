@@ -5,7 +5,8 @@ import styles from './styles.module.css';
 import Header from "@/components/Header";
 import CarouselCards from "@/components/CarouselCards";
 import { Typography, Link, IconButton } from "@mui/material";
-import { ChevronRight } from '@mui/icons-material'
+import { ChevronRight } from '@mui/icons-material';
+import { Info } from '@mui/icons-material'
 
 export default function Home() {
 
@@ -89,49 +90,69 @@ export default function Home() {
         </div>
       </div>
     )
-    
+
   }
   function Q3() {
-    return(
+    return (
       <div className={styles.container2}>
-      <div className={styles.box4}>
-        <div className={styles.boxImage}>
-          <img src="Q3-1.jpg" alt="pic 1" />
+        <div className={styles.box4}>
+          <div className={styles.boxImage}>
+            <img src="Q3-1.jpg" alt="pic 1" />
+          </div>
+          <div className={styles.box4bottom}>
+            <Typography variant="h4" style={{ "scale": '1.0', "marginLeft": "10px" }}>Commercial Banking</Typography>
+            <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "15px" }}>Your needs are our highest priority</Typography>
+          </div>
         </div>
-        <div className={styles.box4bottom}>
-          <Typography variant="h4" style={{"scale": '1.0'}}>Commercial Banking</Typography>
-          
+        <div className={styles.box4}>
+          <div className={styles.boxImage}>
+            <img src="Q3-2.png" alt="pic 1" />
+          </div>
+          <div className={styles.box4bottom}>
+            <Typography variant="h4" style={{ "scale": '1.0', "marginLeft": "10px" }}>Corporate Banking</Typography>
+            <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "15px" }}>Your corporation is in the safest hands</Typography>
+          </div>
+        </div>
+        <div className={styles.box4}>
+          <div className={styles.boxImage}>
+            <img src="Q3-3.jpg" alt="pic 1" />
+          </div>
+          <div className={styles.box4bottom}>
+            <Typography variant="h4" style={{ "scale": '1.0', "marginLeft": "10px" }}>Personal Banking</Typography>
+            <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "13px" }}>Prepare for your future plans of success from today</Typography>
+          </div>
+        </div>
+        <div className={styles.box4}>
+          <div className={styles.boxImage}>
+            <img src="Q3-4.png" alt="pic 1" />
+          </div>
+          <div className={styles.box4bottom}>
+            <Typography variant="h4" style={{ "scale": '1.0', "marginLeft": "10px" }}>Criminal Banking</Typography>
+            <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "15px" }}>Make sure your enterprise is safe from legal hands today</Typography>
+          </div>
         </div>
       </div>
-      <div className={styles.box4}>
-        <div className={styles.boxImage}>
-          <img src="Q3-2.png" alt="pic 1" />
+    )
+  }
+  function Q4() {
+    return (
+      <div className={styles.newsbox}>
+        <div className={styles.newsboxText}>
+          <Info style={{ "color": "white", "marginTop": "16px", "marginRight": "8px" }} />
+          <p>From March 15, 2023 onwards, customers who have committed up to HKD 500,000 of tax fraud are no longer eligible
+            to the reduced 5% commission rate for their agents. We apologize for the inconvenience this may cause. Let us be real, however, you should have seen
+            this coming, after all, committing tax fraud is going to have some kind of repurcussion.</p>
         </div>
-        <div className={styles.box4bottom}>
-          <p>hi</p>
-        </div>
+        <br />
+        <br />
+        <Info style={{ "color": "white", "marginTop": "16px", "marginRight": "8px" }} />
+        <p className={styles.newsboxText}>From April 30, 2023 onwards, customers who refer other customers to join the Commercial banking or Criminal
+          banking enterprise no longer receive benefits tied to the performance of the registered company or criminal enterprise</p>
       </div>
-      <div className={styles.box4}>
-        <div className={styles.boxImage}>
-          <img src="Q3-3.jpg" alt="pic 1" />
-        </div>
-        <div className={styles.box4bottom}>
-          <p>hi</p>
-        </div>
-      </div>
-      <div className={styles.box4}>
-        <div className={styles.boxImage}>
-          <img src="Q3-4.png" alt="pic 1" />
-        </div>
-        <div className={styles.box4bottom}>
-          <p>hi</p>
-        </div>
-      </div>
-    </div>
     )
   }
   return (
-    <>
+    <div style={{ "height": "800px" }}>
       <Header />
       <br />
       <Q1 />
@@ -141,6 +162,9 @@ export default function Home() {
       <br />
       <br />
       <Q3 />
-    </ >
+      <br />
+      <br />
+      <Q4 />
+    </div>
   )
 }
