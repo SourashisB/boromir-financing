@@ -5,46 +5,49 @@ import baseLogo from '@/public/logo.jpg'
 import { IconButton } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import React from 'react';
+import styles from '@/components/styles.module.css'
 
-export default function Footer() {
+
+
+const Footer: React.FC = () => {
+
     return (
-        <Paper sx={{
-            marginTop: 'calc(10% + 60px)',
-            position: 'absolute',
-            bottom: 0,
-            width: '100%'
-        }}>
-            <Box sx={{
-                flexGrow: 1,
-                justifyContent: "flex",
-                display: "flex",
-                my: 1,
-                p: '1'
-            }}>
-                <Image src={baseLogo} alt='Boromir Financing Logo'
-                    width={163}
-                    height={79.448} />
+        <div style={{position: 'relative', minHeight: '100vh'}}>
+            <footer className={styles.footer}>
                 <Box sx={{
                     flexGrow: 1,
-                    justifyContent: "flex-end",
+                    justifyContent: "flex",
                     display: "flex",
-                    my: 1,
-                    px: '2rem'
+                    p: '1'
                 }}>
-                    <IconButton size='large'>
-                        <InstagramIcon />
-                    </IconButton>
-                    <IconButton target='_blank' href='https://www.linkedin.com/in/sourashis-bhowmik-31366b156/' size='large'>
-                        <LinkedInIcon />
-                    </IconButton>
+                    <Image src={baseLogo} alt='Boromir Financing Logo'
+                        width={163 * 0.95}
+                        height={79.448 * 0.95} />
+                    <Box sx={{
+                        flexGrow: 1,
+                        justifyContent: "flex-end",
+                        display: "flex",
+                        my: 1,
+                        px: '2rem'
+                    }}>
+                        <IconButton className={styles.growButton} size='large' disableFocusRipple disableRipple>
+                            <InstagramIcon />
+                        </IconButton>
+                        <IconButton className={styles.growButton} target='_blank' href='https://www.linkedin.com/in/sourashis-bhowmik-31366b156/' size='large' disableFocusRipple disableRipple>
+                            <LinkedInIcon />
+                        </IconButton>
+                    </Box>
                 </Box>
-            </Box>
-            <Box sx={{ px: '.6rem', my: 0, justifyContent: 'center', flexGrow: 1 }}>
-                <Link target="_blank" rel="noopener noreferer"
-                    underline="hover"
-                    color={'rgba(108, 169, 216, 1)'} href="https://github.com/SourashisB">More from this creator
-                </Link>
-            </Box>
-        </Paper>
+                <Box sx={{ my: 0, py: 0, justifyContent: 'flex-end', flexGrow: 1 }}>
+                    <Link target="_blank" rel="noopener noreferer"
+                        underline="hover"
+                        color={'rgba(108, 169, 216, 1)'} href="https://github.com/SourashisB">More from this creator
+                    </Link>
+                </Box>
+            </footer>
+        </div>
     )
 }
+
+export default Footer;

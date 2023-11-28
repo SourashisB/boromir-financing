@@ -16,6 +16,8 @@ export default  globalTheme = createTheme ({
     },
     text: {
       primary: 'rgba(0,0,0,0.79)',
+      secondary: 'rgba(107, 96, 84, 1)',
+      
     },
     warning: {
       main: '#f7a935',

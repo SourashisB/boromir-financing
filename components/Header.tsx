@@ -1,4 +1,4 @@
-import { Box, Drawer, Toolbar } from "@mui/material";
+import { Box, Toolbar } from "@mui/material";
 import * as React from 'react';
 import { AppBar } from "@mui/material";
 import { IconButton } from "@mui/material";
@@ -15,8 +15,6 @@ import PersonIcon from '@mui/icons-material/Person';
 
 export default function Header() {
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-    const [state, setState] = React.useState(false)
 
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 

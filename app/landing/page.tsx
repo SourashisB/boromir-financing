@@ -1,28 +1,19 @@
 "use client"
 
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper'
-import { CustomButton, CustomButtonLink } from '@/components/Button';
-import { TextfieldHelperLabel } from '@/components/TextFields';
-import { Container } from '@mui/material';
+import { Container, Button } from '@mui/material';
+import photo1 from '@/public/insurance-photo-1.jpg';
+import Image from 'next/image';
+
 
 export default function Landing() {
 
     return (
-        <Container maxWidth={'md'}>
-            <Paper sx={{
-                position: 'relative',
-                backgroundColor: 'secondary'
-            }}
-                elevation={4}>
-                <Box>
-                    <CustomButton buttonLink='' buttonText='lmao' onClickFunction={() => { console.log('hi') }} />
-                    <TextfieldHelperLabel labelText='Name' helperText='Your Name here' />
-                    <CustomButtonLink buttonLink='/' buttonText='Main' onClickFunction={{}} />
-                </Box>
-            </Paper>
-        </Container>
+        <div>
+            <Image src={photo1} alt='insurance-photo-1' style={{position: 'relative', display: 'inline-block'}}/>
+            <Button sx={{
+                position: 'absolute',
+                top: '10%',
+                left: '10%'}} variant='contained'>Hello</Button>
+        </div>
     )
 }
