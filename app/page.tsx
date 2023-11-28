@@ -23,7 +23,7 @@ export default function Home() {
     },
     {
       image: '/insurance-photo-3.jpg',
-      title: 'Find Out More',
+      title: 'See Our Plans',
       description: 'Travel Stress Free with our unique and customisable options'
     }
     // Add more items as needed...
@@ -49,7 +49,6 @@ export default function Home() {
             Receive exclusive discounts {<br />} when your referral code is used
           </Typography>
         </div>
-
       </div>
     )
   }
@@ -65,7 +64,7 @@ export default function Home() {
             Apply for Cash Instalment Plan at a monthly handling fee as low as 0.13%
           </Typography>
         </div>
-        <div className={styles.verticalDivider}/>
+        <div className={styles.verticalDivider} />
         <div className={styles.box}>
           <Link variant="h5" sx={{ fontWeight: 'bold' }} color='#FFFFFF' underline="hover" className={styles.link2} align="left">
             Browse the newest MPF plans! {<IconButton sx={{ color: '#102542', marginTop: '-3.5px' }}><ChevronRight /></IconButton>}
@@ -75,7 +74,7 @@ export default function Home() {
             Make climate conscious retirement decisions with our new GreenMPF Fund
           </Typography>
         </div>
-        <div className={styles.verticalDivider}/>
+        <div className={styles.verticalDivider} />
         <div className={styles.box}>
           <Link variant="h5" sx={{ fontWeight: 'bold' }} color='#FFFFFF' underline="hover" className={styles.link2} align="left">
             Unlock the trendiest Travel Rewards! {<IconButton sx={{ color: '#102542', marginTop: '-3.5px' }}><ChevronRight /></IconButton>}
@@ -90,29 +89,58 @@ export default function Home() {
         </div>
       </div>
     )
+    
+  }
+  function Q3() {
+    return(
+      <div className={styles.container2}>
+      <div className={styles.box4}>
+        <div className={styles.boxImage}>
+          <img src="Q3-1.jpg" alt="pic 1" />
+        </div>
+        <div className={styles.box4bottom}>
+          <Typography variant="h4" style={{"scale": '1.0'}}>Commercial Banking</Typography>
+          
+        </div>
+      </div>
+      <div className={styles.box4}>
+        <div className={styles.boxImage}>
+          <img src="Q3-2.png" alt="pic 1" />
+        </div>
+        <div className={styles.box4bottom}>
+          <p>hi</p>
+        </div>
+      </div>
+      <div className={styles.box4}>
+        <div className={styles.boxImage}>
+          <img src="Q3-3.jpg" alt="pic 1" />
+        </div>
+        <div className={styles.box4bottom}>
+          <p>hi</p>
+        </div>
+      </div>
+      <div className={styles.box4}>
+        <div className={styles.boxImage}>
+          <img src="Q3-4.png" alt="pic 1" />
+        </div>
+        <div className={styles.box4bottom}>
+          <p>hi</p>
+        </div>
+      </div>
+    </div>
+    )
   }
   return (
     <>
       <Header />
       <br />
-      <Q1/>
+      <Q1 />
       <br />
-      <Q2/>
+      <Q2 />
       <br />
-      <div className={styles.container2}>
-        <div className={styles.box4}>
-          <img src="/Q3-1.jpg" className={styles.boxImage}/>
-        </div>
-        <div className={styles.box4}>
-          <p>hi</p>
-        </div>
-        <div className={styles.box4}>
-          <p>hello</p>
-        </div>
-        <div className={styles.box4}>
-          <p>pls help tall man</p>
-        </div>
-      </div>
+      <br />
+      <br />
+      <Q3 />
     </ >
   )
 }

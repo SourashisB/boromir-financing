@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <body>
         <Suspense>
-          <div className="w-full" style={{minHeight: 'auto'}}>
+          <div  style={{minHeight: 'auto'}}>
             <div style={{minHeight: 'auto'}}>
               <ThemeRegistry options={{ key: 'mui' }}>{children}</ThemeRegistry>
               <Footer />
