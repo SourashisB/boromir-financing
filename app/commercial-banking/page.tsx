@@ -9,6 +9,7 @@ import { IconButton } from "@mui/material";
 import { ToggleButton } from "@mui/material";
 import { Computer, Checklist } from "@mui/icons-material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ToggleButtonLine } from "@/components/ToggleButtonLine";
 
 declare module '@mui/material/styles' {
     interface Palette {
@@ -43,6 +44,7 @@ theme = createTheme(theme, {
 
 export default function CommercialBanking() {
     const [selected, setSelected] = useState(false)
+    const [secondSelect, setSecondSelect] = useState(false)
     return (
         <div style={{ "height": "800px" }}>
             <Header />
@@ -54,13 +56,10 @@ export default function CommercialBanking() {
                         </Typography>
                         <br />
                         <div className={styles.buttonContainer}>
-                            <ToggleButton value="none" selected={selected} 
-                                onChange={() => {
-                                    setSelected(!selected);
-                                }} sx={{ "borderRadius": "30px", "color":"darkmode.main" }} color="primary">
-                                {selected ? <Checklist /> : null}Select all
-                            </ToggleButton>
+                        <ToggleButtonLine buttonText="Select All" IconComponent={<Checklist />} stateVar={selected} stateVarFunction={setSelected} />
+                            <ToggleButtonLine buttonText="Digital" IconComponent={<Computer />} stateVar={secondSelect} stateVarFunction={setSecondSelect} />
                         </div>
+
                     </div>
                 </ThemeProvider>
             </div>
