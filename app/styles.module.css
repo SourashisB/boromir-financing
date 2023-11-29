@@ -1,3 +1,5 @@
+
+/* inside landing page */
 .container {
   display: flex;
   justify-content: center;
@@ -93,6 +95,7 @@
   align-content: center;
   flex-direction: column;
   background-color: rgba(250, 243, 221, 0.9);
+  
 }
 
 .boxTypography {
@@ -117,3 +120,37 @@
   overflow: hidden;
 }
 
+/* inside commercial banking page */
+
+.headline{
+  background-color: #102542;
+  width: 100%;
+  padding-top: 5%;
+  justify-content: center;
+}
+
+.insideHeadline {
+  background-color: white;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 0%;
+}
+
+.belowheadline{
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 0%;
+  background-color: white;
+  height: 30px;
+}
+
+.headlineText {
+  scale: 0.9;
+  
+}
+
+.buttonContainer{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}

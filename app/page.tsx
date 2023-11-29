@@ -101,7 +101,7 @@ export default function Home() {
               <img src="Q3-1.jpg" alt="pic 1" />
             </div>
             <div className={styles.box4bottom} >
-              <Link variant="h4"  underline="hover" color={'black'} className={styles.link2} style={{'marginLeft':"10px"}}>Commercial Banking</Link>
+              <Link variant="h4"  underline="hover" color={'black'} style={{'marginLeft':"10px"}}>Commercial Banking</Link>
               <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "15px" }}>Your needs are our highest priority</Typography>
             </div>
           </div>
