@@ -6,7 +6,8 @@ import Header from "@/components/Header";
 import CarouselCards from "@/components/CarouselCards";
 import { Typography, Link, IconButton } from "@mui/material";
 import { ChevronRight } from '@mui/icons-material';
-import { Info } from '@mui/icons-material'
+import { Info } from '@mui/icons-material';
+import { navigateToUrl } from "@/components/utils";
 
 export default function Home() {
 
@@ -95,15 +96,15 @@ export default function Home() {
   function Q3() {
     return (
       <div className={styles.container2}>
-        <div className={styles.box4}>
-          <div className={styles.boxImage}>
-            <img src="Q3-1.jpg" alt="pic 1" />
+          <div className={styles.box4}>
+            <div className={styles.boxImage}>
+              <img src="Q3-1.jpg" alt="pic 1" />
+            </div>
+            <div className={styles.box4bottom} >
+              <Link variant="h4"  underline="hover" color={'black'} className={styles.link2} style={{'marginLeft':"10px"}}>Commercial Banking</Link>
+              <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "15px" }}>Your needs are our highest priority</Typography>
+            </div>
           </div>
-          <div className={styles.box4bottom}>
-            <Typography variant="h4" style={{ "scale": '1.0', "marginLeft": "10px" }}>Commercial Banking</Typography>
-            <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "15px" }}>Your needs are our highest priority</Typography>
-          </div>
-        </div>
         <div className={styles.box4}>
           <div className={styles.boxImage}>
             <img src="Q3-2.png" alt="pic 1" />
@@ -118,7 +119,7 @@ export default function Home() {
             <img src="Q3-3.jpg" alt="pic 1" />
           </div>
           <div className={styles.box4bottom}>
-            <Typography variant="h4" style={{ "scale": '1.0', "marginLeft": "10px" }}>Personal Banking</Typography>
+            <Typography variant="h4" style={{ "scale": '1.0', "marginLeft": "10px" }}>Consumer Banking</Typography>
             <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "13px" }}>Prepare for your future plans of success from today</Typography>
           </div>
         </div>
