@@ -199,7 +199,7 @@ export default function CommercialBanking() {
 
 
     return (
-        <div style={{ "height": "800px" }}>
+        <div style={{ "height": "1200px" }}>
             <Header />
             <div className={styles.headline}>
                 <ThemeProvider theme={theme}>
@@ -222,7 +222,6 @@ export default function CommercialBanking() {
                 </ThemeProvider>
             </div>
             <div className={styles.belowheadline} />
-
         </div>
     )
 }
