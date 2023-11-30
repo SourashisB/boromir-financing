@@ -141,6 +141,18 @@ export default function CommercialBanking() {
 
     const [activeCurtain, setActiveCurtain] = useState(curtainItemsDigital)
 
+    function getRandomItem(array: any[]) {
+        const randomIndex = Math.floor(Math.random() * array.length);
+        return array[randomIndex];
+      }
+
+    function randomizeCurtain() {
+        var random1 = getRandomItem(curtainItemsDigital);
+        var random2 = getRandomItem(curtainItemsFinancing);
+        var random3 = getRandomItem(curtainItemsInternational);
+        setActiveCurtain([random1, random2, random3]);
+        
+    }
     
 
     useEffect(() => {
@@ -148,7 +160,7 @@ export default function CommercialBanking() {
             setSecondSelect(false);
             setThirdSelect(false);
             setFourthSelect(false);
-            setActiveCurtain(curtainItemsDigital)
+            randomizeCurtain();
         }
         else {
             setSecondSelect(false);
@@ -160,6 +172,8 @@ export default function CommercialBanking() {
     useEffect(() => {
         if (secondSelect == true){
             setActiveCurtain([]);
+            setThirdSelect(false);
+            setFourthSelect(false);
             setActiveCurtain(curtainItemsDigital);
         }
     },[secondSelect])
@@ -167,6 +181,8 @@ export default function CommercialBanking() {
     useEffect(() => {
         if (thirdSelect == true){
             setActiveCurtain([]);
+            setSecondSelect(false);
+            setFourthSelect(false);
             setActiveCurtain(curtainItemsFinancing);
         }
     },[thirdSelect])
@@ -174,6 +190,8 @@ export default function CommercialBanking() {
     useEffect(() => {
         if (fourthSelect == true){
             setActiveCurtain([]);
+            setSecondSelect(false);
+            setThirdSelect(false);
             setActiveCurtain(curtainItemsInternational);
         }
     },[fourthSelect])
