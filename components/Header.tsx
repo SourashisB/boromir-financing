@@ -38,6 +38,8 @@ export default function Header() {
                             alt="Boromir Financing Logo"
                             width={550}
                             height={90}
+                            blurDataURL="bleeeee"
+                            
                         />
                     </Box>
                     <Box sx={{ flexGrow: 0 }}>
