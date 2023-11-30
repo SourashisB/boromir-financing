@@ -155,3 +155,11 @@
   align-items: center;
   display: flex;
 }
+
+.curtainContainer{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 13%;
+  margin-right: 13%;
+  margin-top: 2%;
+}

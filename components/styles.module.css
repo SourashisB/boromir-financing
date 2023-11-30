@@ -24,10 +24,57 @@
 }
 
 /* toggle buttons */
-.buttonContainer{
+.buttonContainer {
     justify-content: center;
     align-items: center;
     display: flex;
     margin-left: 50px;
     margin-right: 50px;
+}
+
+/* Curtain */
+.curtainContainer {
+    height: 400px;
+    width: 250px;
+   /* background: rgb(228, 225, 169);
+    background: linear-gradient(150deg, rgba(228, 225, 169, 1) 25%, rgba(0, 212, 255, 1) 81%); */
+
+}
+
+.curtainInterior {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 400px;
+    padding-bottom: 15%;
+    transition: background-color 0.3s ease, transform 1s ease;
+    
+
+}
+
+.curtainInterior:hover {
+    background-color: black;
+    color: white;
+
+}
+
+.curtainInterior p {
+    color: white;
+    transition: color 0.3s ease, transform 0.5s ease;
+    transform: translateY(0);
+    scale: 1;
+    overflow: hidden;
+    margin-left: 15px;
+    margin-right: 15px;
+    justify-content: center;
+    font-weight: bolder;
+    
   }
+
+  
+.curtainInterior:hover p {
+    color: white; /* Change the text color to white so it's visible on the black background */
+    transform: translateY(-20px);
+  }
+
