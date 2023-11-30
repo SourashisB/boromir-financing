@@ -9,6 +9,7 @@ import { ChevronRight } from '@mui/icons-material';
 import { Info } from '@mui/icons-material';
 import { navigateToUrl } from "@/components/utils";
 
+
 export default function Home() {
 
   const messageBox = ["Switching Phones?  >", "Refer your friends", "now!"]
@@ -96,15 +97,17 @@ export default function Home() {
   function Q3() {
     return (
       <div className={styles.container2}>
-          <div className={styles.box4}>
-            <div className={styles.boxImage}>
+        <div className={styles.box4}>
+          <div className={styles.boxImage}>
+            <a href="/commercial-banking">
               <img src="Q3-1.jpg" alt="pic 1" />
-            </div>
-            <div className={styles.box4bottom} >
-              <Link variant="h4"  underline="hover" color={'black'} style={{'marginLeft':"10px"}}>Commercial Banking</Link>
-              <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "15px" }}>Your needs are our highest priority</Typography>
-            </div>
+            </a>
           </div>
+          <div className={styles.box4bottom} >
+            <Link variant="h4" underline="hover" color={'black'} style={{ 'marginLeft': "10px" }} className={styles.link2}>Commercial Banking</Link>
+            <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "15px" }}>The needs of your commerce are our highest priority. Visit our plans today</Typography>
+          </div>
+        </div>
         <div className={styles.box4}>
           <div className={styles.boxImage}>
             <img src="Q3-2.png" alt="pic 1" />
