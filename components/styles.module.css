@@ -25,7 +25,7 @@
 
 /* toggle buttons */
 .buttonContainer {
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     display: flex;
     margin-left: 50px;
@@ -78,3 +78,36 @@
     transform: translateY(-20px);
   }
 
+
+/* button group text box */
+.groupTextBoxContainer{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+    height: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.buttonBox{
+    background-color: white;
+    width: max-content;
+    margin-left: 5%;
+
+}
+
+.eachBox{
+    padding-bottom: 15px;
+    font-size: 20px;
+    align-content: center;
+    display: inline-flex;
+    border: solid 1px;
+}
+
+.textBox {
+    flex: 1;
+    background-color: whitesmoke;
+    justify-content: left;
+    align-items: left;
+    margin-left: 20px;
+}

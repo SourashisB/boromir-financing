@@ -8,6 +8,7 @@ import { Typography, Link, IconButton } from "@mui/material";
 import { ChevronRight } from '@mui/icons-material';
 import { Info } from '@mui/icons-material';
 import { navigateToUrl } from "@/components/utils";
+import { MuiCard } from "@/components/MuiCard";
 
 
 export default function Home() {
@@ -31,6 +32,10 @@ export default function Home() {
     }
     // Add more items as needed...
   ];
+
+  const handleClick = (link: string) => {
+    window.location.href = "/commercial-banking"
+  };
 
   function Q1() {
     return (
@@ -92,52 +97,44 @@ export default function Home() {
         </div>
       </div>
     )
-
   }
+
+  const cardItems = [
+    {
+      imageLink: "Q3-1.jpg",
+      title: "Commercial Banking",
+      baseText: "The needs of your commerce are our highest priority. Visit our plans today",
+      clickURL: "/commercial-banking"
+    },
+    {
+      imageLink: "Q3-2.png",
+      title: "Corporate Banking",
+      baseText: "The needs of your commerce are our highest priority. Visit our plans today",
+      clickURL: ""
+    },
+    {
+      imageLink: "Q3-3.jpg",
+      title: "Consumer Banking",
+      baseText: "Prepare for your future plans of success from today",
+      clickURL: ""
+    },
+    {
+      imageLink: "Q3-4.png",
+      title: "Criminal Banking",
+      baseText: "Make sure your enterprise is safe from legal hands everywhere",
+      clickURL: ""
+    }
+  ]
   function Q3() {
     return (
       <div className={styles.container2}>
-        <div className={styles.box4}>
-          <div className={styles.boxImage}>
-            <a href="/commercial-banking">
-              <img src="Q3-1.jpg" alt="pic 1" />
-            </a>
-          </div>
-          <div className={styles.box4bottom} >
-            <Link variant="h4" underline="hover" color={'black'} style={{ 'marginLeft': "10px" }} className={styles.link2}>Commercial Banking</Link>
-            <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "15px" }}>The needs of your commerce are our highest priority. Visit our plans today</Typography>
-          </div>
-        </div>
-        <div className={styles.box4}>
-          <div className={styles.boxImage}>
-            <img src="Q3-2.png" alt="pic 1" />
-          </div>
-          <div className={styles.box4bottom}>
-            <Typography variant="h4" style={{ "scale": '1.0', "marginLeft": "10px" }}>Corporate Banking</Typography>
-            <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "15px" }}>Your corporation is in the safest hands</Typography>
-          </div>
-        </div>
-        <div className={styles.box4}>
-          <div className={styles.boxImage}>
-            <img src="Q3-3.jpg" alt="pic 1" />
-          </div>
-          <div className={styles.box4bottom}>
-            <Typography variant="h4" style={{ "scale": '1.0', "marginLeft": "10px" }}>Consumer Banking</Typography>
-            <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "13px" }}>Prepare for your future plans of success from today</Typography>
-          </div>
-        </div>
-        <div className={styles.box4}>
-          <div className={styles.boxImage}>
-            <img src="Q3-4.png" alt="pic 1" />
-          </div>
-          <div className={styles.box4bottom}>
-            <Typography variant="h4" style={{ "scale": '1.0', "marginLeft": "10px" }}>Criminal Banking</Typography>
-            <Typography variant="body1" style={{ "scale": '1.0', "marginLeft": "15px" }}>Make sure your enterprise is safe from legal hands today</Typography>
-          </div>
-        </div>
+        {cardItems.map((item) => (
+          <MuiCard imageLink={item.imageLink} basetext={item.baseText} clickURL={item.clickURL} title={item.title} />
+        ))}
       </div>
     )
   }
+
   function Q4() {
     return (
       <div className={styles.newsbox}>
