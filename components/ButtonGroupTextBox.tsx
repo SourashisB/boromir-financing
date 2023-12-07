@@ -19,8 +19,7 @@ interface thisComponentProps {
 export const ButtonGroupTextBox: FunctionComponent<thisComponentProps> = ({ TextBoxItems }) => {
 
     const [currentButton, setCurrentButton] = useState(TextBoxItems[0]);
-    const [currentBox, setCurrentBox] = useState(0);
-
+    
     const handleBoxClick = (
         event: React.MouseEvent<HTMLElement>,
         newBoxClick: buttonGroupTextBoxItems | null,

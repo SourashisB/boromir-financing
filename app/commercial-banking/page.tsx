@@ -11,6 +11,8 @@ import { ToggleButtonLine } from "@/components/ToggleButtonLine";
 import { AddBusiness, Public } from "@mui/icons-material";
 import { Curtain } from "@/components/Curtain";
 import { ButtonGroupTextBox } from "@/components/ButtonGroupTextBox";
+import { Flag } from "@/components/Flag";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 declare module '@mui/material/styles' {
     interface Palette {
@@ -203,7 +205,7 @@ export default function CommercialBanking() {
             buttonText: "Business Integrated Accounts",
             boxTitle: "",
             boxText: "Smarter banking to help your business take off",
-            buttonIcon: <Source/>,
+            buttonIcon: <Source />,
             boxButtonText: "Read More"
         },
         {
@@ -211,7 +213,7 @@ export default function CommercialBanking() {
             buttonText: "Business MasterCard/VISA\u00AE",
             boxTitle: "",
             boxText: "Get a spending offer of up to $6,600 RewardCash and a 2-year annual fee waiver for successful application. Apply now and fly high with surprising rewards!",
-            buttonIcon: <CreditCard/>,
+            buttonIcon: <CreditCard />,
             boxButtonText: "Explore our Benefits"
         },
         {
@@ -219,7 +221,7 @@ export default function CommercialBanking() {
             buttonText: "Trading Services",
             boxTitle: "",
             boxText: "While your business evolves with time, our solutions can have you covered.",
-            buttonIcon: <Payments/>,
+            buttonIcon: <Payments />,
             boxButtonText: "Read More"
         },
         {
@@ -227,11 +229,23 @@ export default function CommercialBanking() {
             buttonText: "Digital Banking Solutions",
             boxTitle: "",
             boxText: "Empowering SMEs to create more possibilities.",
-            buttonIcon: <ImportantDevices/>,
+            buttonIcon: <ImportantDevices />,
             boxButtonText: "Find out More"
         }
     ]
+    const flagItems = [
+        {
+            title: "Growing beyond borders with BFinancing",
+            text: "Learn how Plaza Premium Group, a reputable Hong Kong brand, became the global leader in airport hospitality services.",
+            buttonText: "Learn More"
+        },
+        {
+            title: "Short Duration Bond Funds help you discover opportunities",
+            text: "Short Duration Bond Funds help you reduce impact of interest rate movements on asset value and discover opportunities",
+            buttonText: "Logon to find out more"
+        },
 
+    ]
 
     return (
         <div style={{ "height": "1200px" }}>
@@ -258,9 +272,14 @@ export default function CommercialBanking() {
             </div>
             <div className={styles.buttonGroupContainer}>
                 <div className={styles.belowheadline} />
-                <ButtonGroupTextBox TextBoxItems={buttonGroupTextBoxItems}/>
+                <ButtonGroupTextBox TextBoxItems={buttonGroupTextBoxItems} />
             </div>
-            
+            <div className={styles.flagContainer}>
+                {flagItems.map((index) => (
+                    <Flag title={index.title} text={index.text} buttonText={index.buttonText}/>
+                )) }
+            </div>
+        <ScrollToTop/>
         </div>
     )
 }

@@ -111,3 +111,72 @@
     align-items: left;
     margin-left: 20px;
 }
+
+/* flag box */
+.flagBox{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    display: flex;
+    justify-content: space-between;
+        
+}
+
+.flagLeft{
+    background-color: black;
+    color: white;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+
+.flagRight{
+    width: 50%
+}
+
+@keyframes gradientBackground1 {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+/*  'background: linear-gradient(to right, purple, blue, black)',
+        'background: radial-gradient(circle, purple, blue, black)',
+        'background: linear-gradient(126deg, purple, blue, black, red)' */
+.background1{
+    background: linear-gradient(to right, purple, blue, black);
+    background-size: 200% 200%;
+    animation: gradientBackground1 4s ease infinite;
+    flex: 1;
+}
+
+@keyframes gradientBackground2 {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.background2{
+    background: radial-gradient(circle, purple, blue, black);
+    background-size: 250% 250%;
+    animation: gradientBackground2 4s ease infinite;
+    flex: 1
+}
+
+@keyframes gradientBackground3{
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.background3{
+    background: linear-gradient(126deg, purple, blue, black, red);
+    background-size: 225% 225%;
+    animation: gradientBackground3 4s ease infinite;
+    flex:1
+}

@@ -191,3 +191,10 @@
   height: 35%;
   
 }
+
+/* flag group */
+.flagContainer{
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: rgba(250, 243, 221, 0.85)
+}

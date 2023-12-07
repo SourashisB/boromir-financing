@@ -7,8 +7,8 @@ import CarouselCards from "@/components/CarouselCards";
 import { Typography, Link, IconButton } from "@mui/material";
 import { ChevronRight } from '@mui/icons-material';
 import { Info } from '@mui/icons-material';
-import { navigateToUrl } from "@/components/utils";
 import { MuiCard } from "@/components/MuiCard";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 
 export default function Home() {
@@ -33,10 +33,7 @@ export default function Home() {
     // Add more items as needed...
   ];
 
-  const handleClick = (link: string) => {
-    window.location.href = "/commercial-banking"
-  };
-
+  
   function Q1() {
     return (
       <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '.6rem', width: '100%' }}>
@@ -166,6 +163,7 @@ export default function Home() {
       <br />
       <br />
       <Q4 />
+      <ScrollToTop/>
     </div>
   )
 }
