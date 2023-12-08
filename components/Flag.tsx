@@ -14,7 +14,10 @@ export const Flag: FunctionComponent<FlagProps> = ({ title, text, buttonText }) 
     const randomBackgrounds = [
         <div className={styles.background1}/>,
         <div className={styles.background2}/>,
-        <div className={styles.background3}/>
+        <div className={styles.background3}/>,
+        <div className={styles.gradient}/>,
+        <div className={styles.gradient2}/>,
+        <div className={styles.gradient3}/>
     ]
 
     function randomClass(){

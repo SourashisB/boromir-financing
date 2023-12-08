@@ -36,7 +36,7 @@
 .curtainContainer {
     height: 400px;
     width: 250px;
-   /* background: rgb(228, 225, 169);
+    /* background: rgb(228, 225, 169);
     background: linear-gradient(150deg, rgba(228, 225, 169, 1) 25%, rgba(0, 212, 255, 1) 81%); */
 
 }
@@ -49,7 +49,7 @@
     height: 400px;
     padding-bottom: 15%;
     transition: background-color 0.3s ease, transform 1s ease;
-    
+
 
 }
 
@@ -69,18 +69,19 @@
     margin-right: 15px;
     justify-content: center;
     font-weight: bolder;
-    
-  }
 
-  
+}
+
+
 .curtainInterior:hover p {
-    color: white; /* Change the text color to white so it's visible on the black background */
+    color: white;
+    /* Change the text color to white so it's visible on the black background */
     transform: translateY(-20px);
-  }
+}
 
 
 /* button group text box */
-.groupTextBoxContainer{
+.groupTextBoxContainer {
     display: flex;
     justify-content: space-between;
     padding-top: 5%;
@@ -89,14 +90,14 @@
     padding-right: 5%;
 }
 
-.buttonBox{
+.buttonBox {
     background-color: white;
     width: max-content;
     margin-left: 5%;
 
 }
 
-.eachBox{
+.eachBox {
     padding-bottom: 15px;
     font-size: 20px;
     align-content: center;
@@ -113,7 +114,7 @@
 }
 
 /* flag box */
-.flagBox{
+.flagBox {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 3%;
@@ -122,10 +123,10 @@
     padding-bottom: 0.5%;
     display: flex;
     justify-content: space-between;
-        
+
 }
 
-.flagLeft{
+.flagLeft {
     background-color: black;
     color: white;
     padding-left: 2%;
@@ -135,20 +136,28 @@
     padding-right: 50px;
 }
 
-.flagRight{
+.flagRight {
     width: 50%
 }
 
 @keyframes gradientBackground1 {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 /*  'background: linear-gradient(to right, purple, blue, black)',
         'background: radial-gradient(circle, purple, blue, black)',
         'background: linear-gradient(126deg, purple, blue, black, red)' */
-.background1{
+.background1 {
     background: linear-gradient(to right, purple, blue, black);
     background-size: 200% 200%;
     animation: gradientBackground1 4s ease infinite;
@@ -156,27 +165,91 @@
 }
 
 @keyframes gradientBackground2 {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.background2{
+.background2 {
     background: radial-gradient(circle, purple, blue, black);
     background-size: 250% 250%;
     animation: gradientBackground2 4s ease infinite;
     flex: 1
 }
 
-@keyframes gradientBackground3{
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+@keyframes gradientBackground3 {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.background3{
+.background3 {
     background: linear-gradient(126deg, purple, blue, black, red);
     background-size: 225% 225%;
     animation: gradientBackground3 4s ease infinite;
-    flex:1
+    flex: 1
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient {
+    flex: 1;
+    background-size: 200% 200%;
+    background-image: linear-gradient(45deg,
+            black,
+            #6f0930,
+            purple);
+    animation: gradient 4s ease infinite;
+}
+
+.gradient2 {
+    flex: 1;
+    background-size: 200% 200%;
+    background-image: linear-gradient(60deg,
+            #f79533,
+            #f37055,
+            #ef4e7b,
+            #a166ab,
+            #5073b8,
+            #1098ad,
+            #07b39b,
+            #6fba82);
+    animation: gradient 10s ease infinite;
+}
+
+.gradient3 {
+    flex: 1;
+    background-size: 200% 200%;
+    background-image: linear-gradient(120deg,
+            #84fab0,
+            #8fd3f4);
+    animation: gradient 5s ease infinite;
 }

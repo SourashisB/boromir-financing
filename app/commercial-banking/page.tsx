@@ -244,11 +244,16 @@ export default function CommercialBanking() {
             text: "Short Duration Bond Funds help you reduce impact of interest rate movements on asset value and discover opportunities",
             buttonText: "Logon to find out more"
         },
+        {
+            title: "Here lies a great man who truly changed the world",
+            text: "The 20th century, South East Asia, global superpowers, entire world order, and the balance of power were all changed by this legend",
+            buttonText: "Learn more about Henry Kissinger"
+        }
 
     ]
 
     return (
-        <div style={{ "height": "1200px" }}>
+        <div style={{ "height": "1060px" }}>
             <Header />
             <div className={styles.headline}>
                 <ThemeProvider theme={theme}>
