@@ -11,10 +11,34 @@ import Menu from '@mui/material/Menu';
 import flatLogo from '@/public/logo-flat.png';
 import CustomDrawer from "./Drawer";
 import PersonIcon from '@mui/icons-material/Person';
+import { useRouter } from "next/router";
+import {Link} from "@mui/material";
 
 
-export default function Header() {
+const Header: React.FC = () => {
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+    const settings2=[
+        {
+            name:'Profile',
+            link:''
+        },
+        {
+            name:'Account',
+            link:''
+        },
+        {
+            name:'Dashboard',
+            link:''
+        },
+        {
+            name:'Login',
+            link:'/user/login'
+        }
+    ]
+
+
+
 
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -24,6 +48,8 @@ export default function Header() {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+
+    const handleClick = (link:string) => {}
 
     return (
         <React.Fragment>
@@ -66,9 +92,9 @@ export default function Header() {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
+                            {settings2.map((setting) => (
+                                <MenuItem key={setting.name} >
+                                    <Link  href={setting.link} underline='none' sx={{color:'black'}}>{setting.name}</Link>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -78,3 +104,6 @@ export default function Header() {
         </React.Fragment>
     )
 }
+
+
+export default Header;

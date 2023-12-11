@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React from "react";
 import styles from './styles.module.css';
 import Header from "@/components/Header";
 import CarouselCards from "@/components/CarouselCards";
@@ -107,7 +107,7 @@ export default function Home() {
       imageLink: "Q3-2.png",
       title: "Corporate Banking",
       baseText: "The needs of your commerce are our highest priority. Visit our plans today",
-      clickURL: ""
+      clickURL: "/corporate-banking"
     },
     {
       imageLink: "Q3-3.jpg",

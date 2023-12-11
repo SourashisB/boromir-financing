@@ -1,3 +1,18 @@
+#root, .mainBody{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1;
+}
+@font-face {
+  font-family: 'Archivo';
+  src: url('/public/Archivo-VariableFont_wdth\,wght.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
 
 /* inside landing page */
 .container {
@@ -228,4 +243,23 @@
   bottom: 0;
   left: 0;
   z-index: 1;
+}
+
+
+/*user login page*/
+.loginShell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+}
+
+.roundedSquare{
+  width: 500px;
+  height: 500px;
+  background-color: #faf3ddff; 
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
