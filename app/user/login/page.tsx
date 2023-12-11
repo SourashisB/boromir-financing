@@ -28,17 +28,19 @@ export default function LoginPage() {
     })
     return (
         <div style={{ height: "auto" }}>
-            <div className={styles.loginShell}>
-                <div className={styles.roundedSquare}>
-                    <Typography align="center" variant="h2" gutterBottom>
-                        Login
-                    </Typography>
-                    <TextField id="username" variant="standard" sx={{marginLeft:'10px', marginBottom: '20px'}} label="Username" 
-                    required value={user} onChange={handleChange1} ></TextField>
-                    <TextField id="password" type="password" variant="standard" sx={{marginLeft:'10px', marginBottom: '20px'}} label="Password" 
-                    required value={password} onChange={handleChange2 } ></TextField>
+            <ThemeProvider theme={theme}>
+                <div className={styles.loginShell}>
+                    <div className={styles.roundedSquare}>
+                        <Typography align="center" variant="h2" gutterBottom>
+                            Login
+                        </Typography>
+                        <TextField id="username" variant="standard" sx={{ marginLeft: '10px', marginBottom: '20px' }} label="Username"
+                            required value={user} onChange={handleChange1} ></TextField>
+                        <TextField id="password" type="password" variant="standard" sx={{ marginLeft: '10px', marginBottom: '20px' }} label="Password"
+                            required value={password} onChange={handleChange2} ></TextField>
+                    </div>
                 </div>
-            </div>
+            </ThemeProvider>
         </div>
     )
 
