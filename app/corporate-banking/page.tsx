@@ -3,7 +3,7 @@
 import React, {useState, useEffect} from "react";
 import Header from "@/components/Header";
 import styles from '@/app/styles.module.css';
-import { Link, Typography } from '@mui/material';
+import { Link } from '@mui/material';
 import { Feed, Newspaper, AssuredWorkload } from "@mui/icons-material";
 
 export default function CorporateBanking() {

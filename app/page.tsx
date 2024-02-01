@@ -149,6 +149,29 @@ export default function Home() {
       </div>
     )
   }
+
+  fetch('http://localhost:8080/api/process', {
+    method: 'POST',
+    headers: {
+      'Content-Type':'application/json',
+    },
+    body: JSON.stringify({
+      "param1": "hello@bro.com",
+      "param2": "isitarainbow"
+    })
+  }).then(response => {
+    if(!response.ok){
+      throw new Error('Error 400, failed');
+    }
+    return response.json();
+  }).then(data => {
+    console.log(data);
+  }).catch(error => {
+    console.log('Problem:',error)
+  });
+
+  
+
   return (
     <div style={{ "height": "800px" }}>
       <Header />
